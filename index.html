@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Pirate's Treasure</h1>
+    </header>
+    <main>
+      <div class="manager__container">
+        <nav class="nav">
+          <div class="nav__text">
+            <h2>Mark a treasure</h2>
+            <p class="text__sub">Edit your treasure below. Be correct.</p>
+          </div>
+          <div class="nav__btns">
+            <button class="btn">Join the Pirate Confession</button>
+            <button class="btn">Sign In</button>
+          </div>
+        </nav>
+
+        <div class="input__wrap">
+          <div class="input__container">
+            <label class="input__label" for="-name-input">Name:</label>
+            <input class="input" type="text" name="" id="-name-input" />
+          </div>
+          <div class="input__container">
+            <label class="input__label" for="-cost-input">Cost:</label>
+            <input
+              class="input"
+              type="text"
+              name=""
+              id="-cost-input"
+              pattern="\d{1,}"
+            />
+          </div>
+          <div class="input__container">
+            <label class="input__label" for="-location-input">Location:</label>
+            <input class="input" type="text" name="" id="-location-input" />
+          </div>
+        </div>
+
+        <div class="manager__btns">
+          <button class="btn" id="-btn__send">Send</button>
+          <button class="btn" id="-btn__clear">Clear All</button>
+        </div>
+      </div>
+
+      <div class="treasure-list__wrap">
+        <h2 id="-treasure-list__heading">Treasure list:</h2>
+        <div class='treasure-list' id="-treasure-list">
+      </div>
+    </main>
+  </body>
+</html>
+
+<!-- Add svg using JS -->
