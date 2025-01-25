@@ -3,15 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pirate's Treasure</title>
 
+    <meta name="author" content="Denis Kramarenko" />
+    <meta name="description" content="Pirate's Treasure" />
+    <meta property="og:image" content="assets/images/mega-pirate.jpg" />
+    <meta
+      property="og:description"
+      content="Open source pirate treasure list. Try it! Make it!"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <script src="scripts/script.js" defer></script>
+
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="assets/icons/favicon-96x96.png"
+      type="image/png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      href="assets/icons/favicon-192x192.png"
+      type="image/png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      href="assets/icons/favicon-512x512.png"
+      type="image/png"
+      sizes="512x512"
+    />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/icons/favicon.svg"
+      type="image/svg+xml"
+    />
   </head>
   <body>
     <header>
       <h1>Pirate's Treasure</h1>
     </header>
+
     <main>
       <div class="manager__container">
         <nav class="nav">
@@ -28,7 +62,13 @@
         <div class="input__wrap">
           <div class="input__container">
             <label class="input__label" for="-name-input">Name:</label>
-            <input class="input" type="text" name="" id="-name-input" required/>
+            <input
+              class="input"
+              type="text"
+              name=""
+              id="-name-input"
+              required
+            />
           </div>
           <div class="input__container">
             <label class="input__label" for="-cost-input">Cost:</label>
@@ -43,10 +83,16 @@
           </div>
           <div class="input__container">
             <label class="input__label" for="-location-input">Location:</label>
-            <input class="input" type="text" name="" id="-location-input" required/>
+            <input
+              class="input"
+              type="text"
+              name=""
+              id="-location-input"
+              required
+            />
           </div>
         </div>
-        
+
         <div class="manager__btns">
           <button class="btn" id="-btn__send">Send</button>
           <button class="btn" id="-btn__clear">Clear All</button>
@@ -56,7 +102,7 @@
 
       <div class="treasure-list__wrap">
         <h2 id="-treasure-list__heading">Treasure list:</h2>
-        <div class='treasure-list' id="-treasure-list">
+        <div class="treasure-list" id="-treasure-list"></div>
       </div>
     </main>
   </body>
