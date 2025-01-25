@@ -95,7 +95,7 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 .btn__delete-element:hover {
@@ -179,4 +179,61 @@ main {
   padding-inline: 5px;
   font-size: 1.2rem;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column-reverse;
+  }
+
+  .input__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    font-size: 3rem;
+  }
+
+  .input__label {
+    font-size: 2rem;
+  }
+
+  .text__sub {
+    display: none;
+  }
+
+  .manager__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 2rem;
+  }
+
+  .nav__btns {
+    display: none;
+  }
+
+  .treasure__wrap-info {
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .treasure__info {
+    font-size: 2rem;
+  }
+
+  .btn__delete-element {
+    height: 75px;
+    width: 75px;
+  }
 }

@@ -108,3 +108,4 @@ for (let i = 0; i < allTreasures.length; i++) {
     localStorage.setItem("key", treasureList.innerHTML);
   });
 }
+
