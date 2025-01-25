@@ -1,5 +1,15 @@
 "use strict";
 
+//Functions
+function isInputValid(...args) {
+  for (let i = 0; i < args.length; i++) {
+    if (!args[i].checkValidity()) {
+      return false;
+    }
+  }
+  return true;
+}
+
 // Buttons
 const btnSend = document.getElementById("-btn__send");
 const btnClearAll = document.getElementById("-btn__clear");
@@ -12,6 +22,8 @@ const allTreasures = document.getElementsByClassName("treasure");
 const allBtnsDeleteElement = document.getElementsByClassName(
   "btn__delete-element"
 );
+
+const errorMessage = document.getElementById("error-message");
 // Input
 const inputName = document.getElementById("-name-input");
 const inputCost = document.getElementById("-cost-input");
@@ -31,6 +43,14 @@ const inputLocation = document.getElementById("-location-input");
 
 btnSend.addEventListener("click", () => {
   // Creating Elements
+
+  if (!isInputValid(inputName, inputCost, inputLocation)) {
+    errorMessage.textContent = "The entered data is incorrect";
+    return;
+  } else {
+    errorMessage.textContent = "";
+  }
+
   const newTreasure = document.createElement("div");
   newTreasure.classList.add("treasure");
 
@@ -70,7 +90,10 @@ btnSend.addEventListener("click", () => {
   newTreasureWrapInfo.append(fragmentNewTreasureInfo);
 
   localStorage.setItem("key", treasureList.innerHTML);
-  console.log(allTreasures.length);
+
+  inputName.value = "";
+  inputCost.value = "";
+  inputLocation.value = "";
 });
 
 btnClearAll.addEventListener("click", () => {

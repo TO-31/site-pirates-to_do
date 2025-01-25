@@ -28,7 +28,7 @@
         <div class="input__wrap">
           <div class="input__container">
             <label class="input__label" for="-name-input">Name:</label>
-            <input class="input" type="text" name="" id="-name-input" />
+            <input class="input" type="text" name="" id="-name-input" required/>
           </div>
           <div class="input__container">
             <label class="input__label" for="-cost-input">Cost:</label>
@@ -38,17 +38,19 @@
               name=""
               id="-cost-input"
               pattern="\d{1,}"
+              required
             />
           </div>
           <div class="input__container">
             <label class="input__label" for="-location-input">Location:</label>
-            <input class="input" type="text" name="" id="-location-input" />
+            <input class="input" type="text" name="" id="-location-input" required/>
           </div>
         </div>
-
+        
         <div class="manager__btns">
           <button class="btn" id="-btn__send">Send</button>
           <button class="btn" id="-btn__clear">Clear All</button>
+          <div id="error-message"></div>
         </div>
       </div>
 

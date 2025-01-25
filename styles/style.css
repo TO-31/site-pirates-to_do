@@ -56,6 +56,11 @@ main {
   align-items: center;
 }
 
+.nav__btns {
+  display: flex;
+  gap: 5px;
+}
+
 /* text */
 .text__sub {
   color: var(--color-text-dull);
@@ -133,6 +138,10 @@ main {
 /* manager */
 .manager__btns {
   margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.6rem;
 }
 
 .treasure-list__wrap {
