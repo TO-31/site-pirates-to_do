@@ -98,11 +98,13 @@ btnSend.addEventListener("click", () => {
 
 btnClearAll.addEventListener("click", () => {
   treasureList.replaceChildren();
+  localStorage.setItem("key", treasureList.innerHTML);
 });
 
 for (let i = 0; i < allTreasures.length; i++) {
   allBtnsDeleteElement[i].addEventListener("click", (event) => {
     const closestElement = event.target.closest(".treasure");
     closestElement.remove();
+    localStorage.setItem("key", treasureList.innerHTML);
   });
 }
